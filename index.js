@@ -2,7 +2,7 @@ function somarPartidas(wins, loses) {
     return wins - loses
 }
 
-function wins() {
+function patente() {
     let resultWins = somarPartidas(345, 101)
     if (resultWins < 11) {
         console.log(`O Herói tem ${resultWins} vitórias e está no nível [FERRO]`)
@@ -21,4 +21,4 @@ function wins() {
     }
 }
 
-wins()
+patente()
