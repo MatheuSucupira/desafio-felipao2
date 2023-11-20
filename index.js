@@ -1,35 +1,24 @@
-class Player {
-    constructor(){
-        this.name = "Estranho"
-        this.type = "Ninja"
-        this.age = 24
-    }
+function somarPartidas(wins, loses) {
+    return wins - loses
+}
 
-    ataque() {
-        if (this.type === "Mago") {
-            console.log("-----------------")
-            console.log(`o ${this.type} atacou usando Magia`)
-            console.log("-----------------")
-        }else if (this.type === "Guerreiro") {
-            console.log("-----------------")
-            console.log(`o ${this.type} atacou usando Espada`)
-            console.log("-----------------")
-        }else if (this.type === "Monge") {
-            console.log("-----------------")
-            console.log(`o ${this.type} atacou usando Artes Marciais`)
-            console.log("-----------------")
-        }else if (this.type === "Ninja") {
-            console.log("-----------------")
-            console.log(`o ${this.type} atacou usando Shurikens`)
-            console.log("-----------------")
-        }else {
-            console.log("**********************")
-            console.log("Houve um Erro! Não existe um tipo de personagem")
-            console.log("**********************")
-        }
+function patente() {
+    let resultWins = somarPartidas(345, 101)
+    if (resultWins < 11) {
+        console.log(`O Herói tem ${resultWins} vitórias e está no nível [FERRO]`)
+    }else if (resultWins > 10 & resultWins < 21) {
+        console.log(`O Herói tem ${resultWins} vitórias e está no nível [BRONZE]`)
+    }else if (resultWins > 20 & resultWins < 51) {
+        console.log(`O Herói tem ${resultWins} vitórias e está no nível [PRATA]`)
+    }else if (resultWins > 50 & resultWins < 81) {
+        console.log(`O Herói tem ${resultWins} vitórias e está no nível [OURO]`)
+    }else if (resultWins > 80 & resultWins < 91) {
+        console.log(`O Herói tem ${resultWins} vitórias e está no nível [DIAMANTE]`)
+    }else if (resultWins > 90 & resultWins < 101) {
+        console.log(`O Herói tem ${resultWins} vitórias e está no nível [LENDÁRIO]`)
+    }else {
+        console.log(`O Herói tem ${resultWins} vitórias e está no nível [IMORTAL]`)
     }
 }
 
-let player = new Player()
-
-player.ataque()
+patente()
